@@ -9,3 +9,6 @@
 import Foundation
 import UIKit
 
+class BottomTextFieldDelegate: NSObject, UITextFieldDelegate {
+    
+}

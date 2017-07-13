@@ -8,3 +8,7 @@
 
 import Foundation
 import UIKit
+
+class TopTextFieldDelegate: NSObject, UITextFieldDelegate {
+    
+}
