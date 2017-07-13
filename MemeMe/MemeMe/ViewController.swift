@@ -14,7 +14,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func pickAnImage(_ sender: Any) {
@@ -30,6 +29,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
+            imagePickerView.contentMode = .scaleAspectFill
         } else {
             print("Image loading failed")
         }
