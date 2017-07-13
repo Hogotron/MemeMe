@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
     
@@ -19,7 +19,20 @@ class ViewController: UIViewController {
 
     @IBAction func pickAnImage(_ sender: Any) {
         let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imagePickerView.image = image
+        } else {
+            print("Image loading failed")
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 }
