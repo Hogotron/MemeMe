@@ -30,7 +30,7 @@
                                 <items>
                                     <barButtonItem title="Pick" id="a1a-gD-Csn" userLabel="Pick">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="WQR-8K-vEg"/>
+                                            <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="b1o-3D-y0G"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
