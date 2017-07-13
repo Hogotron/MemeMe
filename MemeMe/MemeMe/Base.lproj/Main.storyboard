@@ -33,6 +33,11 @@
                                             <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="b1o-3D-y0G"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Camera" id="Ke6-XW-KtM">
+                                        <connections>
+                                            <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="Wv8-I0-9jN"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
