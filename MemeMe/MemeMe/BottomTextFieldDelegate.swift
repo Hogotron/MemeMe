@@ -28,4 +28,9 @@ class BottomTextFieldDelegate: NSObject, UITextFieldDelegate {
             textField.text! = textField.text!
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
