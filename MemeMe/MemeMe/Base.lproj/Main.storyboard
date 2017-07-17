@@ -49,7 +49,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-TQ-xVG">
-                                <rect key="frame" x="112" y="463" width="97" height="30"/>
+                                <rect key="frame" x="112" y="464" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
@@ -70,8 +70,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomTextField" destination="8fg-TQ-xVG" id="zZP-Hv-6MO"/>
                         <outlet property="cameraButton" destination="Ke6-XW-KtM" id="uzx-tP-vNe"/>
                         <outlet property="imagePickerView" destination="A7B-ht-VRz" id="IhA-uO-OJm"/>
+                        <outlet property="topTextField" destination="u13-cn-S6M" id="uwj-75-JZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
