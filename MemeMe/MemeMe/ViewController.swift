@@ -20,6 +20,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.topTextField.delegate = topTextFieldDelegate
+        self.bottomTextField.delegate = bottomTextFieldDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
