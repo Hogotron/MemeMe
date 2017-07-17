@@ -91,16 +91,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func subscribeToKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
     
     func unsubscribeToKeyboardNotifications() {
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
     
     // MARK: Shift view's frame up when keyboardWillShow notification is received
     
     func keyboardWillShow(_ notification: Notification) {
         view.frame.origin.y -= getKeyboardHeight(notification)
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        view.frame.origin.y += getKeyboardHeight(notification)
     }
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
