@@ -20,6 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
+    
 
     @IBAction func pickImageFromAlbum(_ sender: Any) {
         let imagePicker = UIImagePickerController()

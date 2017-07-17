@@ -10,5 +10,10 @@ import Foundation
 import UIKit
 
 class TopTextFieldDelegate: NSObject, UITextFieldDelegate {
-    
+   
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.text!.isEmpty {
+            textField.text = ""
+        }
+    }
 }
