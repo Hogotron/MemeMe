@@ -15,7 +15,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
-    
+    let topTextFieldDelegate = TopTextFieldDelegate()
+    let bottomTextFieldDelegate = BottomTextFieldDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
