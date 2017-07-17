@@ -11,9 +11,21 @@ import UIKit
 
 class TopTextFieldDelegate: NSObject, UITextFieldDelegate {
    
+    // MARK: Text field delegate method
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // Figure out what the new text will be if we return true
+        var newText = textField.text! as NSString
+        newText = newText.replacingCharacters(in: range, with: string) as NSString
+    
+    return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.text!.isEmpty {
+        if textField.text! == "TOP" {
             textField.text = ""
+        } else {
+            textField.text! = textField.text!
         }
     }
 }
