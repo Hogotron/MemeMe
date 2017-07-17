@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37102BA51F1D731800B68E5F /* MemeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37102BA41F1D731800B68E5F /* MemeStruct.swift */; };
 		376864AF1F16EE6800D5D266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376864AE1F16EE6800D5D266 /* AppDelegate.swift */; };
 		376864B11F16EE6800D5D266 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376864B01F16EE6800D5D266 /* ViewController.swift */; };
 		376864B41F16EE6800D5D266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376864B21F16EE6800D5D266 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37102BA41F1D731800B68E5F /* MemeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeStruct.swift; sourceTree = "<group>"; };
 		376864AB1F16EE6800D5D266 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376864AE1F16EE6800D5D266 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376864B01F16EE6800D5D266 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				376864BA1F16EE6800D5D266 /* Info.plist */,
 				376864C01F1836C400D5D266 /* TopTextFieldDelegate.swift */,
 				376864C21F1836D300D5D266 /* BottomTextFieldDelegate.swift */,
+				37102BA41F1D731800B68E5F /* MemeStruct.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				376864C11F1836C400D5D266 /* TopTextFieldDelegate.swift in Sources */,
 				376864C31F1836D300D5D266 /* BottomTextFieldDelegate.swift in Sources */,
 				376864B11F16EE6800D5D266 /* ViewController.swift in Sources */,
+				37102BA51F1D731800B68E5F /* MemeStruct.swift in Sources */,
 				376864AF1F16EE6800D5D266 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +312,7 @@
 				376864BF1F16EE6800D5D266 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
