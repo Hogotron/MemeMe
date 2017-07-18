@@ -50,7 +50,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teA-W0-6ah">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem id="a9t-Kn-Odx"/>
+                                    <navigationItem id="a9t-Kn-Odx">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" id="Nqf-FZ-pgv"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u13-cn-S6M">
@@ -86,6 +88,7 @@
                         <outlet property="bottomTextField" destination="8fg-TQ-xVG" id="zZP-Hv-6MO"/>
                         <outlet property="cameraButton" destination="Ke6-XW-KtM" id="uzx-tP-vNe"/>
                         <outlet property="imagePickerView" destination="A7B-ht-VRz" id="IhA-uO-OJm"/>
+                        <outlet property="shareButton" destination="Nqf-FZ-pgv" id="1Za-kJ-xDL"/>
                         <outlet property="topTextField" destination="u13-cn-S6M" id="uwj-75-JZL"/>
                     </connections>
                 </viewController>
