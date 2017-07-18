@@ -125,6 +125,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
+    func share() {
+        let memedImage: UIImage = generateMemedImage()
+        let shareViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        present(shareViewController, animated: true, completion: nil)
+        
+        shareViewController.completionWithItemsHandler = { (activityType: UIActivityType?, completed: Bool, returnedItemds: [Any]?, error: Error?) -> Void in
+            if completed == true {
+                self.save(memedImage: memedImage)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
     func save(memedImage: UIImage) {
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
     }
