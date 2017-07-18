@@ -130,11 +130,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Data management
     
     func generateMemedImage() -> UIImage {
+        
+        // Hide navbar and toolbar
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.isToolbarHidden = true
+        
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return memedImage
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.isToolbarHidden = false
+        
     }
     
     @IBAction func share(_ sender: Any) {
