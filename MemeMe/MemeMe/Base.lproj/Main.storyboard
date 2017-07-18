@@ -84,6 +84,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VNc-8E-0Dj" secondAttribute="bottom" id="wlP-Gj-3Q5"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="bottomTextField" destination="8fg-TQ-xVG" id="zZP-Hv-6MO"/>
                         <outlet property="cameraButton" destination="Ke6-XW-KtM" id="uzx-tP-vNe"/>
