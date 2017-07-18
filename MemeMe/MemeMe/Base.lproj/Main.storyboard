@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-ht-VRz">
-                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="480"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNc-8E-0Dj">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
@@ -79,7 +79,7 @@
                             <constraint firstItem="u13-cn-S6M" firstAttribute="top" secondItem="teA-W0-6ah" secondAttribute="bottom" constant="24" id="a3R-yw-xDt"/>
                             <constraint firstItem="u13-cn-S6M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="giG-sY-lLE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8fg-TQ-xVG" secondAttribute="trailing" constant="95" id="hYe-v8-WiY"/>
-                            <constraint firstAttribute="centerY" secondItem="A7B-ht-VRz" secondAttribute="centerY" constant="12" id="hpE-PH-7yy"/>
+                            <constraint firstAttribute="centerY" secondItem="A7B-ht-VRz" secondAttribute="centerY" id="hpE-PH-7yy"/>
                             <constraint firstAttribute="centerX" secondItem="A7B-ht-VRz" secondAttribute="centerX" id="qG3-kY-1CE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VNc-8E-0Dj" secondAttribute="bottom" id="wlP-Gj-3Q5"/>
                         </constraints>
