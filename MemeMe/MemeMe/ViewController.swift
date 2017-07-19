@@ -142,6 +142,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
         return memedImage
         
+        // Show navbar and toolbar
+        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.isToolbarHidden = false
         
