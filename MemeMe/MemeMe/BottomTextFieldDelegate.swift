@@ -27,6 +27,7 @@ class BottomTextFieldDelegate: NSObject, UITextFieldDelegate {
         } else {
             textField.text! = textField.text!
         }
+        textField.sizeToFit()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
