@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-ht-VRz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-ht-VRz">
                                 <rect key="frame" x="0.0" y="44" width="414" height="648"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNc-8E-0Dj">
@@ -43,15 +43,15 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mOy-LW-THv"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-TQ-xVG">
-                                <rect key="frame" x="116" y="659" width="183" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-TQ-xVG">
+                                <rect key="frame" x="0.0" y="659" width="414" height="17"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u13-cn-S6M">
-                                <rect key="frame" x="116" y="68" width="183" height="17"/>
+                                <rect key="frame" x="0.0" y="68" width="414" height="17"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -75,7 +75,7 @@
                             <constraint firstItem="VNc-8E-0Dj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Sc-NJ-mdW"/>
                             <constraint firstItem="8fg-TQ-xVG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="5Lj-sL-TcC"/>
                             <constraint firstItem="VNc-8E-0Dj" firstAttribute="top" secondItem="A7B-ht-VRz" secondAttribute="bottom" id="6mE-pa-nIO"/>
-                            <constraint firstItem="u13-cn-S6M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="9ad-aI-MQA"/>
+                            <constraint firstItem="u13-cn-S6M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9ad-aI-MQA"/>
                             <constraint firstAttribute="trailing" secondItem="VNc-8E-0Dj" secondAttribute="trailing" id="CJQ-DW-LCQ"/>
                             <constraint firstItem="VNc-8E-0Dj" firstAttribute="top" secondItem="8fg-TQ-xVG" secondAttribute="bottom" constant="16" id="G3C-OE-kO7"/>
                             <constraint firstItem="teA-W0-6ah" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KEb-8z-Baz"/>
@@ -84,7 +84,7 @@
                             <constraint firstAttribute="trailing" secondItem="teA-W0-6ah" secondAttribute="trailing" id="Uov-2B-sj6"/>
                             <constraint firstItem="teA-W0-6ah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZEk-td-rKD"/>
                             <constraint firstItem="A7B-ht-VRz" firstAttribute="leading" secondItem="teA-W0-6ah" secondAttribute="leading" id="b51-VB-VSo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u13-cn-S6M" secondAttribute="trailing" constant="95" id="enP-yW-8C5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u13-cn-S6M" secondAttribute="trailing" constant="-20" id="enP-yW-8C5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8fg-TQ-xVG" secondAttribute="trailing" constant="95" id="hYe-v8-WiY"/>
                             <constraint firstAttribute="centerY" secondItem="A7B-ht-VRz" secondAttribute="centerY" id="hpE-PH-7yy"/>
                             <constraint firstItem="u13-cn-S6M" firstAttribute="top" secondItem="teA-W0-6ah" secondAttribute="bottom" constant="24" id="q1g-sC-srh"/>
@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113.75" y="123.59154929577466"/>
+            <point key="canvasLocation" x="1113.0434782608697" y="123.09782608695653"/>
         </scene>
     </scenes>
 </document>
