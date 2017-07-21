@@ -37,6 +37,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var topConstraint: NSLayoutConstraint!
     var bottomConstraint: NSLayoutConstraint!
+    var leftConstraint: NSLayoutConstraint!
+    var rightConstraint: NSLayoutConstraint!
     
     // MARK: Lifecycle
     
