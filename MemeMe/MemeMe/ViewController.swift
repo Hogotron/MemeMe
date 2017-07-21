@@ -155,7 +155,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let size = imagePickerView.image != nil ? imagePickerView.image!.size : imagePickerView.frame.size
         let frame = AVMakeRect(aspectRatio: size, insideRect: imagePickerView.bounds)
         
-        let margin = frame.origin.y + frame.size.height * 0.10
+        let margin = frame.origin.y + frame.size.height * 0.01
         
         topConstraint = NSLayoutConstraint(item: topTextField, attribute: .top, relatedBy: .equal, toItem: imagePickerView, attribute: .top, multiplier: 1.0, constant: margin)
         view.addConstraint(topConstraint)
