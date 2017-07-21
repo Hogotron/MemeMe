@@ -30,7 +30,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSStrokeColorAttributeName: UIColor.white,
         NSForegroundColorAttributeName: UIColor.black,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: -0.8
+        NSStrokeWidthAttributeName: -2.5
     ]
     
     // MARK: Programmatic constraint variables
