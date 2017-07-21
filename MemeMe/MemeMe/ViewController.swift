@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
@@ -31,6 +32,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeWidthAttributeName: -0.8
     ]
+    
+    // MARK: Programmatic constraint variables
+    
+    var topConstraint: NSLayoutConstraint!
+    var bottomConstraint: NSLayoutConstraint!
     
     // MARK: Lifecycle
     
@@ -67,6 +73,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeToKeyboardNotifications()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layoutTextFields()
     }
     
     // MARK: Declare functions
@@ -129,6 +140,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.cgRectValue.height
+    }
+    
+    // MARK: Programmatically constrain text fields to image
+    
+    func layoutTextFields() {
+        if topConstraint != nil {
+            view.removeConstraint(topConstraint)
+        }
+        if bottomConstraint != nil {
+            view.removeConstraint(bottomConstraint)
+        }
+        
+        let size = imagePickerView.image != nil ? imagePickerView.image!.size : imagePickerView.frame.size
+        let frame = AVMakeRect(aspectRatio: size, insideRect: imagePickerView.bounds)
+        
+        let margin = frame.origin.y + frame.size.height * 0.10
+        
+        topConstraint = NSLayoutConstraint(item: topTextField, attribute: .top, relatedBy: .equal, toItem: imagePickerView, attribute: .top, multiplier: 1.0, constant: margin)
+        view.addConstraint(topConstraint)
+        bottomConstraint = NSLayoutConstraint(item: bottomTextField, attribute: .bottom, relatedBy: .equal, toItem: imagePickerView, attribute: .bottom, multiplier: 1.0, constant: -margin)
+        view.addConstraint(bottomConstraint)
     }
     
     // MARK: Data management
