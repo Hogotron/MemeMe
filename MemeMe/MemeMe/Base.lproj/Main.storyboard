@@ -61,7 +61,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="a9t-Kn-Odx">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="Nqf-FZ-pgv">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Nqf-FZ-pgv">
                                             <connections>
                                                 <action selector="share:" destination="BYZ-38-t0r" id="1u4-kO-ZyS"/>
                                             </connections>
