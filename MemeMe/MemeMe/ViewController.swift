@@ -27,8 +27,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Declare default text attributes
     
     let memeTextAttributes:[String:Any] = [
-        NSStrokeColorAttributeName: UIColor.white,
-        NSForegroundColorAttributeName: UIColor.black,
+        NSStrokeColorAttributeName: UIColor.black,
+        NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeWidthAttributeName: -2.5
     ]
