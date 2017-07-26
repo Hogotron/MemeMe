@@ -49,19 +49,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Assign delegates to outlets
-        self.topTextField.delegate = topTextFieldDelegate
-        self.bottomTextField.delegate = bottomTextFieldDelegate
-        
-        // Assign memeTextAttributes to text fields
-        self.topTextField.defaultTextAttributes = memeTextAttributes
-        self.bottomTextField.defaultTextAttributes = memeTextAttributes
-        
-        // Center text in text fields
-        topTextField.textAlignment = .center
-        bottomTextField.textAlignment = .center
-        
+        prepareTextField(textField: topTextField)
+        prepareTextField(textField: bottomTextField)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,11 +59,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         subscribeToKeyboardNotifications()
         
         // Disable share button unless image is selected
-        if imagePickerView.image == nil {
-            shareButton.isEnabled = false
-        } else {
-            shareButton.isEnabled = true
-        }
+        shareButton.isEnabled = imagePickerView.image == nil ? false : true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -117,6 +102,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dismiss(animated: true, completion: nil)
     }
     
+    func prepareTextField(textField: UITextField) {
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
+        if textField == topTextField {
+            textField.delegate = topTextFieldDelegate
+        } else if textField == bottomTextField {
+            textField.delegate = bottomTextFieldDelegate
+        }
+    }
+    
     // MARK: Keyboard notifications
     
     func subscribeToKeyboardNotifications() {
@@ -133,14 +128,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func keyboardWillShow(_ notification: Notification) {
         if self.bottomTextField.isFirstResponder {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(_ notification: Notification) {
-        if self.bottomTextField.isFirstResponder {
-            view.frame.origin.y += getKeyboardHeight(notification)
-        }
+            view.frame.origin.y = 0
     }
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
