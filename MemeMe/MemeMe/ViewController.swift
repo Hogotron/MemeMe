@@ -229,7 +229,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(shareViewController, animated: true, completion: nil)
         
         shareViewController.completionWithItemsHandler = { (activityType: UIActivityType?, completed: Bool, returnedItemds: [Any]?, error: Error?) -> Void in
-            if completed == true {
+            if completed {
                 self.save(memedImage: memedImage)
                 self.dismiss(animated: true, completion: nil)
             }
