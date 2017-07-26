@@ -195,7 +195,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         view.addConstraint(bottomRightConstraint)
     }
  */
-    
+   
+    func hideToolbars(hide: Bool) {
+        navBar.isHidden = hide
+        toolBar.isHidden = hide
+    }
 
     
     // MARK: Data management
@@ -204,19 +208,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Hide navbar and toolbar
         
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.isToolbarHidden = true
+        hideToolbars(hide: true)
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        return memedImage
         
         // Show navbar and toolbar
         
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.isToolbarHidden = false
+        hideToolbars(hide: false)
+        
+        return memedImage
         
     }
     
