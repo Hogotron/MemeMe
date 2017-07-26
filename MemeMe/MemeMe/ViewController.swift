@@ -23,8 +23,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: Text field delegate objects
 
-    let topTextFieldDelegate = TextFieldDelegate()
-    let bottomTextFieldDelegate = TextFieldDelegate()
+    let textFieldDelegate = TextFieldDelegate()
     
     // MARK: Declare default text attributes
     
@@ -34,18 +33,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeWidthAttributeName: -2.5
     ]
-    
-    // MARK: Programmatic constraint variables
-    
-    var topConstraint: NSLayoutConstraint!
-    var bottomConstraint: NSLayoutConstraint!
-    var leftConstraint: NSLayoutConstraint!
-    var rightConstraint: NSLayoutConstraint!
-    var topLeftConstraint: NSLayoutConstraint!
-    var topRightConstraint: NSLayoutConstraint!
-    var bottomLeftConstraint: NSLayoutConstraint!
-    var bottomRightConstraint: NSLayoutConstraint!
-    
     
     // MARK: Lifecycle
     
@@ -71,7 +58,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-      //  layoutTextFields()
     }
     
     // MARK: Declare functions
@@ -107,11 +93,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func prepareTextField(textField: UITextField) {
         textField.defaultTextAttributes = memeTextAttributes
         textField.textAlignment = .center
-        if textField == topTextField {
-            textField.delegate = topTextFieldDelegate
-        } else if textField == bottomTextField {
-            textField.delegate = bottomTextFieldDelegate
-        }
+        textField.delegate = textFieldDelegate
     }
     
     // MARK: Keyboard notifications
@@ -167,7 +149,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         hideToolbars(hide: false)
         
         return memedImage
-        
     }
     
     @IBAction func share(_ sender: Any) {
