@@ -143,64 +143,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.cgRectValue.height
     }
-    
-    // MARK: This was my attempt to programmatically constrain text fields to image, so they would stay inside the image rather than float above and below it.
-    
-
-    /*
-    func layoutTextFields() {
-        
-        if topConstraint != nil {
-            view.removeConstraint(topConstraint)
-        }
-        if bottomConstraint != nil {
-            view.removeConstraint(bottomConstraint)
-        }
-        if topLeftConstraint != nil {
-            view.removeConstraint(topLeftConstraint)
-        }
-        if topRightConstraint != nil {
-            view.removeConstraint(topRightConstraint)
-        }
-        if bottomLeftConstraint != nil {
-            view.removeConstraint(bottomLeftConstraint)
-        }
-        if bottomRightConstraint != nil {
-            view.removeConstraint(bottomRightConstraint)
-        }
-        
-
-        let size = imagePickerView.image != nil ? imagePickerView.image!.size : imagePickerView.frame.size
-        let frame = AVMakeRect(aspectRatio: size, insideRect: imagePickerView.bounds)
-        
-        let marginY = frame.origin.y + frame.size.height * 0.01
-        let marginX = frame.origin.x + frame.size.width * 0.01
-        
-        topConstraint = NSLayoutConstraint(item: topTextField, attribute: .top, relatedBy: .equal, toItem: imagePickerView, attribute: .top, multiplier: 1.0, constant: marginY)
-        view.addConstraint(topConstraint)
-        
-        bottomConstraint = NSLayoutConstraint(item: bottomTextField, attribute: .bottom, relatedBy: .equal, toItem: imagePickerView, attribute: .bottom, multiplier: 1.0, constant: -marginY)
-        view.addConstraint(bottomConstraint)
-                
-        topLeftConstraint = NSLayoutConstraint(item: topTextField, attribute: .left, relatedBy: .equal, toItem: imagePickerView, attribute: .left, multiplier: 1.0, constant: marginX)
-        view.addConstraint(topLeftConstraint)
-        
-        topRightConstraint = NSLayoutConstraint(item: topTextField, attribute: .right, relatedBy: .equal, toItem: imagePickerView, attribute: .right, multiplier: 1.0, constant: -marginX)
-        view.addConstraint(topRightConstraint)
-        
-        bottomLeftConstraint = NSLayoutConstraint(item: bottomTextField, attribute: .left, relatedBy: .equal, toItem: imagePickerView, attribute: .left, multiplier: 1.0, constant: marginX)
-        view.addConstraint(bottomLeftConstraint)
-        
-        bottomRightConstraint = NSLayoutConstraint(item: bottomTextField, attribute: .right, relatedBy: .equal, toItem: imagePickerView, attribute: .right, multiplier: 1.0, constant: -marginX)
-        view.addConstraint(bottomRightConstraint)
-    }
- */
    
     func hideToolbars(hide: Bool) {
         navBar.isHidden = hide
         toolBar.isHidden = hide
     }
-
     
     // MARK: Data management
     
