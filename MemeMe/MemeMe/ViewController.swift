@@ -23,8 +23,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: Text field delegate objects
 
-    let topTextFieldDelegate = TopTextFieldDelegate()
-    let bottomTextFieldDelegate = BottomTextFieldDelegate()
+    let topTextFieldDelegate = TextFieldDelegate()
+    let bottomTextFieldDelegate = TextFieldDelegate()
     
     // MARK: Declare default text attributes
     

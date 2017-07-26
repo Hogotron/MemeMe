@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TopTextFieldDelegate: NSObject, UITextFieldDelegate {
+class TextFieldDelegate: NSObject, UITextFieldDelegate {
    
     // MARK: Text field delegate method
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -22,7 +22,7 @@ class TopTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.text! == "TOP" {
+        if textField.text! == "TOP" || textField.text! == "BOTTOM" {
             textField.text = ""
         } else {
             textField.text! = textField.text!
