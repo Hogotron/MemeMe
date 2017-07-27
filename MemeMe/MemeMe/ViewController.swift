@@ -63,16 +63,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Declare functions
     
     @IBAction func pickImageFromAlbum(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        self.present(imagePicker, animated: true, completion: nil)
+        presentImagePickerWithSourceType(sourceType: .photoLibrary)
     }
     
     @IBAction func pickImageFromCamera(_ sender: Any) {
+        presentImagePickerWithSourceType(sourceType: .camera)
+    }
+    
+    func presentImagePickerWithSourceType(sourceType: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = sourceType
         self.present(imagePicker, animated: true, completion: nil)
     }
     
