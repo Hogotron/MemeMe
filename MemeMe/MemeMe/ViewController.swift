@@ -11,6 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
+    var meme = [Meme]()
+    
     // MARK: Add outlets
     
     @IBOutlet weak var imagePickerView: UIImageView!
