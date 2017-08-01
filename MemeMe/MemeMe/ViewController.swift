@@ -20,6 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var historyButton: UIToolbar!
     
     // MARK: Text field delegate objects
 
@@ -150,6 +151,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         hideToolbars(hide: false)
         
         return memedImage
+    }
+
+    @IBAction func historyButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "historySegue", sender: self)
     }
     
     @IBAction func share(_ sender: Any) {
