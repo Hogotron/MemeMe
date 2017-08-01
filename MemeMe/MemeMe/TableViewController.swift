@@ -42,6 +42,16 @@ class TableViewController: UITableViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let selectedRow = indexPath.row
+            let controller = segue.destination as! ViewController
+            controller.imagePickerView.image = memes[selectedRow].originalImage
+            controller.topTextField.text = memes[selectedRow].topText
+            controller.bottomTextField.text = memes[selectedRow].bottomText
+        }
+    }
+    
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
