@@ -131,11 +131,11 @@
             </objects>
             <point key="canvasLocation" x="1887" y="124"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="hZk-R9-bPl">
             <objects>
                 <navigationController id="0n3-Ld-kqm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Wa4-Fe-VNP"/>
+                    <tabBarItem key="tabBarItem" title="Collection" id="Wa4-Fe-VNP" userLabel="Collection"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JmK-t9-NOb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -151,7 +151,7 @@
         <!--Collection View Controller-->
         <scene sceneID="ab5-eL-elB">
             <objects>
-                <collectionViewController id="q2x-92-78w" sceneMemberID="viewController">
+                <collectionViewController id="q2x-92-78w" customClass="CollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="4M1-cr-bKT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,11 +183,11 @@
             </objects>
             <point key="canvasLocation" x="3522" y="-107"/>
         </scene>
-        <!--Item-->
+        <!--Table-->
         <scene sceneID="frQ-59-807">
             <objects>
                 <navigationController id="PUg-yk-63E" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cqy-Oe-sXj"/>
+                    <tabBarItem key="tabBarItem" title="Table" id="cqy-Oe-sXj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bs4-bE-ahQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
