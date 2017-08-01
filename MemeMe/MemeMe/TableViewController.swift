@@ -27,7 +27,9 @@ class TableViewController: UITableViewController {
         
         cell.memeImageView.image = meme.memedImage
         cell.topTextLabel.text = meme.topText
+        cell.topTextLabel.lineBreakMode = .byWordWrapping
         cell.bottomTextLabel.text = meme.bottomText
+        cell.bottomTextLabel.lineBreakMode = .byWordWrapping
         
         return cell
     }
