@@ -37,7 +37,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let controller = self.storyboard?.instantiateInitialViewController() as! ViewController
         controller.meme = [self.memes[indexPath.row]]
         self.navigationController?.pushViewController(controller, animated: true)
     }

@@ -43,6 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         prepareTextField(textField: topTextField)
         prepareTextField(textField: bottomTextField)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
