@@ -69,12 +69,12 @@
 				3705B15A1F30111600CF63BA /* CollectionViewCell.swift */,
 				3705B1581F300B5500CF63BA /* CollectionViewController.swift */,
 				3705B1561F30072500CF63BA /* TableViewController.swift */,
+				376864C01F1836C400D5D266 /* TextFieldDelegate.swift */,
+				37102BA41F1D731800B68E5F /* MemeStruct.swift */,
 				376864B21F16EE6800D5D266 /* Main.storyboard */,
 				376864B51F16EE6800D5D266 /* Assets.xcassets */,
 				376864B71F16EE6800D5D266 /* LaunchScreen.storyboard */,
 				376864BA1F16EE6800D5D266 /* Info.plist */,
-				376864C01F1836C400D5D266 /* TextFieldDelegate.swift */,
-				37102BA41F1D731800B68E5F /* MemeStruct.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";

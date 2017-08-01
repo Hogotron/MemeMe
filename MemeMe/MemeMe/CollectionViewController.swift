@@ -10,9 +10,16 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
     
-    var memes = [Meme]()
+    var memes: [Meme]!
     
     @IBOutlet weak var cancel: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+    }
     
     override func collectionView(_ collectionVvar: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
