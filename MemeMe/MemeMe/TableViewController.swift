@@ -26,6 +26,7 @@ class TableViewController: UITableViewController {
         let meme = self.memes[indexPath.row]
         
         cell.memeImageView.image = meme.memedImage
+        cell.memeImageView.contentMode = .scaleAspectFit
         cell.topTextLabel.text = meme.topText
         cell.topTextLabel.lineBreakMode = .byWordWrapping
         cell.bottomTextLabel.text = meme.bottomText
