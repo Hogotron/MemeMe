@@ -191,7 +191,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancel" destination="1s9-ld-qLS" id="zDM-0q-pAR"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="88A-Be-0DA"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromCollectionView" id="88A-Be-0DA"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwl-cL-L2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,7 +284,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="crb-Nz-dEO" id="vV6-GZ-wmh"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="STU-mF-jLh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromTableView" id="STU-mF-jLh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfx-5P-nZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
