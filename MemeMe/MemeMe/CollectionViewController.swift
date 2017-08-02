@@ -23,8 +23,10 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if memeToEdit == nil {
-            performSegue(withIdentifier: "showMemeFromCollectionView", sender: self)
+        if memes.isEmpty {
+            if memeToEdit == nil {
+                performSegue(withIdentifier: "showMemeFromCollectionView", sender: self)
+            }
         }
     }
     
