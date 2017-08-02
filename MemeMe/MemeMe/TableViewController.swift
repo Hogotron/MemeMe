@@ -40,19 +40,14 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateInitialViewController() as! ViewController
-        controller.meme = [self.memes[indexPath.row]]
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        // controller.meme = [self.memes[indexPath.row]]
+        controller.imagePickerView.image = memes[indexPath.row].originalImage
+        controller.topTextField.text = memes[indexPath.row].topText
+        controller.bottomTextField.text = memes[indexPath.row].bottomText
         self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let selectedRow = indexPath.row
-            let controller = segue.destination as! ViewController
-            controller.imagePickerView.image = memes[selectedRow].originalImage
-            controller.topTextField.text = memes[selectedRow].topText
-            controller.bottomTextField.text = memes[selectedRow].bottomText
-        }
+        print("\(memes[indexPath.row].topText)")
+        
     }
     
     @IBAction func cancel(_ sender: Any) {
