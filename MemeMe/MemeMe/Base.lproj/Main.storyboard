@@ -41,7 +41,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3hv-EJ-gLU"/>
-                                    <barButtonItem title="History" id="Fny-fb-8bI"/>
+                                    <barButtonItem title="History" id="Fny-fb-8bI">
+                                        <connections>
+                                            <segue destination="q2x-92-78w" kind="show" identifier="showHistory" id="U41-UI-Vy5"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mOy-LW-THv"/>
                                 </items>
                             </toolbar>
@@ -97,7 +101,6 @@
                     <connections>
                         <outlet property="bottomTextField" destination="8fg-TQ-xVG" id="zZP-Hv-6MO"/>
                         <outlet property="cameraButton" destination="Ke6-XW-KtM" id="uzx-tP-vNe"/>
-                        <outlet property="historyButton" destination="VNc-8E-0Dj" id="k4B-j3-CoE"/>
                         <outlet property="imagePickerView" destination="A7B-ht-VRz" id="IhA-uO-OJm"/>
                         <outlet property="navBar" destination="teA-W0-6ah" id="FmO-lk-znd"/>
                         <outlet property="shareButton" destination="Nqf-FZ-pgv" id="1Za-kJ-xDL"/>
@@ -107,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4384" y="263"/>
+            <point key="canvasLocation" x="4468" y="263"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sDZ-7Y-zXR">
@@ -147,8 +150,8 @@
         <!--Collection View Controller-->
         <scene sceneID="ab5-eL-elB">
             <objects>
-                <collectionViewController id="q2x-92-78w" customClass="CollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4M1-cr-bKT">
+                <collectionViewController storyboardIdentifier="CollectionViewController" id="q2x-92-78w" customClass="CollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="4M1-cr-bKT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,7 +231,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vp-KM-Uvd" id="Ysf-zc-lBa">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="155.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-SR-OJH">
@@ -293,6 +296,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="STU-mF-jLh"/>
+        <segue reference="88A-Be-0DA"/>
+        <segue reference="U41-UI-Vy5"/>
     </inferredMetricsTieBreakers>
 </document>
