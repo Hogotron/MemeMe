@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewController: UICollectionViewController {
     
     var memes: [Meme]!
+    var memeToEdit: Meme?
     
     @IBOutlet weak var cancel: UIBarButtonItem!
     
@@ -19,6 +20,12 @@ class CollectionViewController: UICollectionViewController {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if memeToEdit == nil {
+            performSegue(withIdentifier: "showMemeFromCollectionView", sender: self)
+        }
     }
     
     override func collectionView(_ collectionVvar: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,6 +46,22 @@ class CollectionViewController: UICollectionViewController {
         controller.meme = [self.memes[indexPath.row]]
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMemeFromCollectionView" {
+            
+            let controller = segue.destination as! ViewController
+        
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            memes = appDelegate.memes
+        
+            let indexPaths = collectionView!.indexpath
+            // let firstSectionInIndex = indexPaths![0]
+            controller.memeToEdit = appDelegate.memes[indexPaths.row]
+ 
+        }
+        
+    }*/
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

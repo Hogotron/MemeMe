@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITableViewDelegate, UICollectionViewDelegate {
 
     var meme = [Meme]()
+    var memeToEdit: Meme?
     
     // MARK: Add outlets
     
