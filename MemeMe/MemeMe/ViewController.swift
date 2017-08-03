@@ -42,21 +42,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        prepareTextField(textField: topTextField)
+        prepareTextField(textField: bottomTextField)
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.isNavigationBarHidden = true
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if memeToEdit != nil {
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
             imagePickerView.image = memeToEdit?.originalImage
-        } else {
-        prepareTextField(textField: topTextField)
-        prepareTextField(textField: bottomTextField)
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.isNavigationBarHidden = true
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        self.view.backgroundColor = UIColor.cyan
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         subscribeToKeyboardNotifications()
         
