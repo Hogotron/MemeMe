@@ -23,34 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-ht-VRz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="599"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="648"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNc-8E-0Dj">
-                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dge-4C-trD"/>
-                                    <barButtonItem title="Pick" id="a1a-gD-Csn" userLabel="Pick">
-                                        <connections>
-                                            <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="b1o-3D-y0G"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="YcP-3r-5OU"/>
-                                    <barButtonItem title="Camera" id="Ke6-XW-KtM">
-                                        <connections>
-                                            <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="Wv8-I0-9jN"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3hv-EJ-gLU"/>
-                                    <barButtonItem title="History" id="Fny-fb-8bI">
-                                        <connections>
-                                            <segue destination="q2x-92-78w" kind="show" identifier="showHistory" id="U41-UI-Vy5"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mOy-LW-THv"/>
-                                </items>
-                            </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-TQ-xVG">
-                                <rect key="frame" x="20" y="610" width="374" height="17"/>
+                                <rect key="frame" x="20" y="659" width="374" height="17"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -75,25 +51,49 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNc-8E-0Dj">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dge-4C-trD"/>
+                                    <barButtonItem title="Pick" id="a1a-gD-Csn" userLabel="Pick">
+                                        <connections>
+                                            <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="b1o-3D-y0G"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="YcP-3r-5OU"/>
+                                    <barButtonItem title="Camera" id="Ke6-XW-KtM">
+                                        <connections>
+                                            <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="Wv8-I0-9jN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3hv-EJ-gLU"/>
+                                    <barButtonItem title="History" id="Fny-fb-8bI">
+                                        <connections>
+                                            <segue destination="q2x-92-78w" kind="show" identifier="showHistory" id="U41-UI-Vy5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mOy-LW-THv"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VNc-8E-0Dj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Sc-NJ-mdW"/>
-                            <constraint firstItem="8fg-TQ-xVG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5Lj-sL-TcC"/>
-                            <constraint firstItem="VNc-8E-0Dj" firstAttribute="top" secondItem="A7B-ht-VRz" secondAttribute="bottom" id="6mE-pa-nIO"/>
-                            <constraint firstItem="u13-cn-S6M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9ad-aI-MQA"/>
-                            <constraint firstAttribute="trailing" secondItem="VNc-8E-0Dj" secondAttribute="trailing" id="CJQ-DW-LCQ"/>
-                            <constraint firstItem="VNc-8E-0Dj" firstAttribute="top" secondItem="8fg-TQ-xVG" secondAttribute="bottom" constant="16" id="G3C-OE-kO7"/>
-                            <constraint firstItem="teA-W0-6ah" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KEb-8z-Baz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VNc-8E-0Dj" secondAttribute="bottom" id="Mvg-Rk-Wup"/>
-                            <constraint firstItem="A7B-ht-VRz" firstAttribute="top" secondItem="teA-W0-6ah" secondAttribute="bottom" id="Nyh-mR-Y3i"/>
-                            <constraint firstAttribute="trailing" secondItem="teA-W0-6ah" secondAttribute="trailing" id="Uov-2B-sj6"/>
-                            <constraint firstItem="teA-W0-6ah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZEk-td-rKD"/>
-                            <constraint firstItem="A7B-ht-VRz" firstAttribute="leading" secondItem="teA-W0-6ah" secondAttribute="leading" id="b51-VB-VSo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u13-cn-S6M" secondAttribute="trailing" id="enP-yW-8C5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8fg-TQ-xVG" secondAttribute="trailing" id="hYe-v8-WiY"/>
-                            <constraint firstItem="u13-cn-S6M" firstAttribute="top" secondItem="teA-W0-6ah" secondAttribute="bottom" constant="24" id="q1g-sC-srh"/>
-                            <constraint firstAttribute="centerX" secondItem="A7B-ht-VRz" secondAttribute="centerX" id="qG3-kY-1CE"/>
+                            <constraint firstItem="teA-W0-6ah" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6sM-HK-Kov"/>
+                            <constraint firstItem="VNc-8E-0Dj" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="CaR-4C-9Hm"/>
+                            <constraint firstItem="VNc-8E-0Dj" firstAttribute="top" secondItem="A7B-ht-VRz" secondAttribute="bottom" id="DQg-Be-wDM"/>
+                            <constraint firstItem="teA-W0-6ah" firstAttribute="trailing" secondItem="A7B-ht-VRz" secondAttribute="trailing" id="Efy-ES-rHN"/>
+                            <constraint firstItem="teA-W0-6ah" firstAttribute="leading" secondItem="A7B-ht-VRz" secondAttribute="leading" id="GDy-rd-aB6"/>
+                            <constraint firstItem="8fg-TQ-xVG" firstAttribute="centerX" secondItem="VNc-8E-0Dj" secondAttribute="centerX" id="JE6-uJ-DVz"/>
+                            <constraint firstAttribute="trailing" secondItem="teA-W0-6ah" secondAttribute="trailing" id="SNF-DX-kki"/>
+                            <constraint firstItem="A7B-ht-VRz" firstAttribute="trailing" secondItem="VNc-8E-0Dj" secondAttribute="trailing" id="SSj-Uu-OtF"/>
+                            <constraint firstItem="u13-cn-S6M" firstAttribute="top" secondItem="teA-W0-6ah" secondAttribute="bottom" constant="24" id="SjA-WY-Xrw"/>
+                            <constraint firstItem="u13-cn-S6M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Skw-fc-zQI"/>
+                            <constraint firstItem="u13-cn-S6M" firstAttribute="leading" secondItem="8fg-TQ-xVG" secondAttribute="leading" id="ZO2-x8-5OI"/>
+                            <constraint firstItem="A7B-ht-VRz" firstAttribute="leading" secondItem="VNc-8E-0Dj" secondAttribute="leading" id="g3X-Wh-Pt3"/>
+                            <constraint firstItem="teA-W0-6ah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g9Q-D6-gHG"/>
+                            <constraint firstItem="u13-cn-S6M" firstAttribute="trailing" secondItem="8fg-TQ-xVG" secondAttribute="trailing" id="rJ8-co-E5m"/>
+                            <constraint firstItem="A7B-ht-VRz" firstAttribute="top" secondItem="teA-W0-6ah" secondAttribute="bottom" id="xng-ia-qtd"/>
+                            <constraint firstItem="VNc-8E-0Dj" firstAttribute="top" secondItem="8fg-TQ-xVG" secondAttribute="bottom" constant="16" id="xqd-aX-Eyu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B8x-Ln-BSI"/>
