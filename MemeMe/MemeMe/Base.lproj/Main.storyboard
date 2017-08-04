@@ -170,12 +170,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="116" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eou-FT-qEe">
-                                            <rect key="frame" x="8" y="13" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eou-FT-qEe">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="127"/>
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="eou-FT-qEe" firstAttribute="top" secondItem="gjc-fN-iSj" secondAttribute="top" id="1ho-Rf-elz"/>
+                                    <constraint firstAttribute="trailing" secondItem="eou-FT-qEe" secondAttribute="trailing" id="KVh-Hk-Ua9"/>
+                                    <constraint firstItem="eou-FT-qEe" firstAttribute="leading" secondItem="gjc-fN-iSj" secondAttribute="leading" id="Rcv-ae-j38"/>
+                                    <constraint firstAttribute="bottom" secondItem="eou-FT-qEe" secondAttribute="bottom" id="UFg-KQ-TuA"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="memeImageView" destination="eou-FT-qEe" id="2Ws-Hs-q3V"/>
                                 </connections>
