@@ -49,22 +49,6 @@ class CollectionViewController: UICollectionViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMemeFromCollectionView" {
-            
-            let controller = segue.destination as! ViewController
-        
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            memes = appDelegate.memes
-        
-            let indexPaths = collectionView!.indexpath
-            // let firstSectionInIndex = indexPaths![0]
-            controller.memeToEdit = appDelegate.memes[indexPaths.row]
- 
-        }
-        
-    }*/
-    
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
