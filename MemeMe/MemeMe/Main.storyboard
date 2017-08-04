@@ -69,7 +69,8 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3hv-EJ-gLU"/>
                                     <barButtonItem title="History" id="Fny-fb-8bI">
                                         <connections>
-                                            <segue destination="q2x-92-78w" kind="show" identifier="showHistory" id="U41-UI-Vy5"/>
+                                            <action selector="showHistory:" destination="BYZ-38-t0r" id="8H3-WC-tO6"/>
+                                            <segue destination="dVC-pI-Swy" kind="show" identifier="showHistory" id="Pmk-Tp-8Vx"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mOy-LW-THv"/>
@@ -152,7 +153,7 @@
         <scene sceneID="ab5-eL-elB">
             <objects>
                 <collectionViewController storyboardIdentifier="CollectionViewController" id="q2x-92-78w" customClass="CollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4M1-cr-bKT">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="4M1-cr-bKT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,7 +303,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="88A-Be-0DA"/>
-        <segue reference="U41-UI-Vy5"/>
+        <segue reference="STU-mF-jLh"/>
     </inferredMetricsTieBreakers>
 </document>

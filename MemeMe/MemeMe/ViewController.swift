@@ -173,7 +173,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
 
-     @IBAction func historyButton(_ sender: Any) {
+    @IBAction func showHistory(_ sender: Any) {
         self.performSegue(withIdentifier: "showHistory", sender: self)
     }
     
