@@ -47,6 +47,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         prepareTextField(textField: bottomTextField)
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.isNavigationBarHidden = true
+        if memeToEdit != nil {
+            imagePickerView.image = memeToEdit?.originalImage
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +61,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if memeToEdit != nil {
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
-            imagePickerView.image = memeToEdit?.originalImage
             historyButton.isEnabled = true
         }
         self.imagePickerView.backgroundColor = UIColor.cyan
