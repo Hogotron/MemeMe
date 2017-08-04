@@ -23,8 +23,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
-    @IBOutlet weak var historyButton: UIToolbar!
-    
+    @IBOutlet weak var historyButton: UIBarButtonItem!
+  
     // MARK: Text field delegate objects
 
     let textFieldDelegate = TextFieldDelegate()
@@ -42,24 +42,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         prepareTextField(textField: topTextField)
         prepareTextField(textField: bottomTextField)
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.isNavigationBarHidden = true
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if meme.isEmpty {
+            historyButton.isEnabled = false
+        }
         if memeToEdit != nil {
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
             imagePickerView.image = memeToEdit?.originalImage
+            historyButton.isEnabled = true
         }
         self.imagePickerView.backgroundColor = UIColor.cyan
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
         subscribeToKeyboardNotifications()
         
         // Disable share button unless image is selected
@@ -189,6 +193,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
+        historyButton.isEnabled = true
     }
 }
 
