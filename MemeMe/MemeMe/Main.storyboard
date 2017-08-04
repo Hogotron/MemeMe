@@ -196,6 +196,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1s9-ld-qLS">
                             <connections>
                                 <action selector="cancel:" destination="q2x-92-78w" id="qEa-PK-mhI"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="cancelFromCollectionToViewController" id="A06-E4-ihv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -303,6 +304,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="STU-mF-jLh"/>
+        <segue reference="A06-E4-ihv"/>
     </inferredMetricsTieBreakers>
 </document>

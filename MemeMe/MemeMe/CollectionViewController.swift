@@ -50,6 +50,6 @@ class CollectionViewController: UICollectionViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "showMemeFromCollectionView", sender: self)
+        self.performSegue(withIdentifier: "cancelFromCollectionToViewController", sender: self)
     }
 }
