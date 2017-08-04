@@ -50,6 +50,6 @@ class CollectionViewController: UICollectionViewController {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "showMemeFromCollectionView", sender: self)
     }
 }
