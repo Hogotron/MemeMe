@@ -59,7 +59,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imagePickerView.image = memeToEdit?.originalImage
         }
         self.imagePickerView.backgroundColor = UIColor.cyan
-        imagePickerView.frame.origin.y = 16
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         subscribeToKeyboardNotifications()
         
