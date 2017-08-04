@@ -55,8 +55,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if meme.isEmpty {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            if appDelegate.memes.isEmpty {
             historyButton.isEnabled = false
+            print("meme array is empty")
         }
         if memeToEdit != nil {
             topTextField.text = memeToEdit?.topText
