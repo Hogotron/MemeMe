@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var memes: [Meme]!
     var memeToEdit: Meme?
@@ -33,7 +33,7 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionVvar: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         let meme = self.memes[indexPath.row]
-        
+    
         cell.memeImageView.image = meme.memedImage
         
         return cell
@@ -47,6 +47,11 @@ class CollectionViewController: UICollectionViewController {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         controller.memeToEdit = memes[indexPath.item]
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemHeight = 120
+        return CGSize(width: (collectionView.bounds.size.width)/3, height: CGFloat(itemHeight))
     }
     
     @IBAction func cancel(_ sender: Any) {
