@@ -11,6 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
     
     var memes: [Meme]!
+    var memeToEdit: Meme?
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
    
@@ -52,13 +53,8 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        // controller.meme = [self.memes[indexPath.row]]
-        controller.imagePickerView.image = memes[indexPath.row].originalImage
-        controller.topTextField.text = memes[indexPath.row].topText
-        controller.bottomTextField.text = memes[indexPath.row].bottomText
+        controller.memeToEdit = memes[indexPath.row]
         self.navigationController?.pushViewController(controller, animated: true)
-        print("\(memes[indexPath.row].topText)")
-        
     }
     
     @IBAction func cancel(_ sender: Any) {
