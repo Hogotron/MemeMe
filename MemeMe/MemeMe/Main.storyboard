@@ -71,14 +71,7 @@
                                             <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="Wv8-I0-9jN"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3hv-EJ-gLU"/>
-                                    <barButtonItem title="History" id="Fny-fb-8bI">
-                                        <connections>
-                                            <action selector="showHistory:" destination="BYZ-38-t0r" id="8H3-WC-tO6"/>
-                                            <segue destination="dVC-pI-Swy" kind="show" identifier="showHistory" id="Pmk-Tp-8Vx"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mOy-LW-THv"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rNw-Qh-WOV"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -108,7 +101,6 @@
                         <outlet property="bottomTextField" destination="8fg-TQ-xVG" id="zZP-Hv-6MO"/>
                         <outlet property="cameraButton" destination="Ke6-XW-KtM" id="uzx-tP-vNe"/>
                         <outlet property="cancelButton" destination="HfJ-fm-Mob" id="vJv-Dm-riz"/>
-                        <outlet property="historyButton" destination="Fny-fb-8bI" id="5Ct-Y7-Xed"/>
                         <outlet property="imagePickerView" destination="A7B-ht-VRz" id="IhA-uO-OJm"/>
                         <outlet property="navBar" destination="teA-W0-6ah" id="FmO-lk-znd"/>
                         <outlet property="shareButton" destination="Nqf-FZ-pgv" id="1Za-kJ-xDL"/>
