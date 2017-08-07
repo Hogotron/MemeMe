@@ -291,6 +291,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="crb-Nz-dEO">
                             <connections>
                                 <action selector="cancel:" destination="g20-FD-URT" id="zsp-nh-ae0"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="cancelSegueFromTableView" id="cuA-Qr-Yja"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -305,6 +306,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A06-E4-ihv"/>
+        <segue reference="cuA-Qr-Yja"/>
     </inferredMetricsTieBreakers>
 </document>
