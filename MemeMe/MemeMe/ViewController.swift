@@ -180,6 +180,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.performSegue(withIdentifier: "showHistory", sender: self)
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func share(_ sender: Any) {
         let memedImage: UIImage = generateMemedImage()
         let shareViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
