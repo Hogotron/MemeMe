@@ -62,7 +62,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
         }
-        self.imagePickerView.backgroundColor = UIColor.cyan
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
         subscribeToKeyboardNotifications()
