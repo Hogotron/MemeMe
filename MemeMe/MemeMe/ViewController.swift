@@ -23,7 +23,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
-    @IBOutlet weak var historyButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
   
     // MARK: Text field delegate objects
@@ -59,13 +58,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
             if appDelegate.memes.isEmpty {
             cancelButton.isEnabled = false
-            historyButton.isEnabled = false
             print("meme array is empty, so cancel button will not be enabled")
         }
         if memeToEdit != nil {
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
-            historyButton.isEnabled = true
             cancelButton.isEnabled = true
             print("cancel button should now be enabled")
         }
@@ -177,10 +174,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         hideToolbars(hide: false)
         
         return memedImage
-    }
-
-    @IBAction func showHistory(_ sender: Any) {
-        self.performSegue(withIdentifier: "showHistory", sender: self)
     }
     
     @IBAction func cancel(_ sender: Any) {
