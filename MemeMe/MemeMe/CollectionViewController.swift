@@ -13,10 +13,19 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     var memes: [Meme]!
     var memeToEdit: Meme?
     
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var cancel: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let space:CGFloat = 3.0
+        let width = (view.frame.size.width - (2 * space)) / 3.0
+        let height = (view.frame.size.height - (3 * space)) / 4.0
+        
+        collectionViewFlowLayout.minimumInteritemSpacing = space
+        collectionViewFlowLayout.minimumLineSpacing = space
+        collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
@@ -47,11 +56,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         controller.memeToEdit = memes[indexPath.item]
         self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemHeight = 120
-        return CGSize(width: (collectionView.bounds.size.width)/3, height: CGFloat(itemHeight))
     }
     
     @IBAction func cancel(_ sender: Any) {
