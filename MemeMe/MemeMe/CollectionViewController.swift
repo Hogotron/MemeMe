@@ -31,14 +31,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         memes = appDelegate.memes
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if memes.isEmpty {
-            if memeToEdit == nil {
-                performSegue(withIdentifier: "showMemeFromCollectionView", sender: self)
-            }
-        }
-    }
-    
     override func collectionView(_ collectionVvar: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView?.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         let meme = self.memes[indexPath.row]
