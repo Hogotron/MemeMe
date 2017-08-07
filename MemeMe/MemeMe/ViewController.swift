@@ -58,13 +58,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
             if appDelegate.memes.isEmpty {
+            cancelButton.isEnabled = false
             historyButton.isEnabled = false
-            print("meme array is empty")
+            print("meme array is empty, so cancel button will not be enabled")
         }
         if memeToEdit != nil {
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
             historyButton.isEnabled = true
+            cancelButton.isEnabled = true
+            print("cancel button should now be enabled")
         }
         self.imagePickerView.backgroundColor = UIColor.cyan
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
@@ -73,10 +76,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Disable share button unless image is selected
         shareButton.isEnabled = imagePickerView.image == nil ? false : true
-        
-        // Disable cancek button unless image is selected
-        cancelButton.isEnabled = imagePickerView.image == nil ?
-            false: true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -206,7 +205,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
-        historyButton.isEnabled = true
+        cancelButton.isEnabled = true
     }
 }
 
