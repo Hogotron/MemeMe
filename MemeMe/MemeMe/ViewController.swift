@@ -73,6 +73,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Disable share button unless image is selected
         shareButton.isEnabled = imagePickerView.image == nil ? false : true
+        
+        // Disable cancek button unless image is selected
+        cancelButton.isEnabled = imagePickerView.image == nil ?
+            false: true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
