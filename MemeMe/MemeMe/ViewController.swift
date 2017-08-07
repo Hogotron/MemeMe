@@ -24,6 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var historyButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
   
     // MARK: Text field delegate objects
 

@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="bottomTextField" destination="8fg-TQ-xVG" id="zZP-Hv-6MO"/>
                         <outlet property="cameraButton" destination="Ke6-XW-KtM" id="uzx-tP-vNe"/>
+                        <outlet property="cancelButton" destination="HfJ-fm-Mob" id="vJv-Dm-riz"/>
                         <outlet property="historyButton" destination="Fny-fb-8bI" id="5Ct-Y7-Xed"/>
                         <outlet property="imagePickerView" destination="A7B-ht-VRz" id="IhA-uO-OJm"/>
                         <outlet property="navBar" destination="teA-W0-6ah" id="FmO-lk-znd"/>
