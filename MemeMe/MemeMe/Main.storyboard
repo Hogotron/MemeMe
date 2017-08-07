@@ -51,6 +51,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="HfJ-fm-Mob">
                                             <connections>
                                                 <action selector="cancel:" destination="BYZ-38-t0r" id="tQ0-Vd-rld"/>
+                                                <segue destination="dVC-pI-Swy" kind="show" identifier="cancelSegue" id="NUN-Ij-Nbv"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
