@@ -48,6 +48,7 @@
                                                 <action selector="share:" destination="BYZ-38-t0r" id="1u4-kO-ZyS"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="HfJ-fm-Mob"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
