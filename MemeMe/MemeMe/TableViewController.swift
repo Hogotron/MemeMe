@@ -77,7 +77,7 @@ class TableViewController: UITableViewController {
     // MARK: Actions
     
     @IBAction func addMeme(_ sender: Any) {
-        let controller = ViewController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ViewController")
+        self.navigationController?.pushViewController(controller!, animated: true)
     }
 }

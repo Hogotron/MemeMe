@@ -293,7 +293,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SMc-X8-Wk1">
                             <connections>
                                 <action selector="addMeme:" destination="g20-FD-URT" id="rPR-zU-09C"/>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="addMemeFromTableView" id="WKl-sS-wlv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -308,6 +307,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="88A-Be-0DA"/>
+        <segue reference="STU-mF-jLh"/>
     </inferredMetricsTieBreakers>
 </document>
