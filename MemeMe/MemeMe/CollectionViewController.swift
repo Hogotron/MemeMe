@@ -63,7 +63,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     // MARK: Actions
     
     @IBAction func addButton(_ sender: Any) {
-        let controller = ViewController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ViewController")
+        self.navigationController?.pushViewController(controller!, animated: true)
     }
 }
