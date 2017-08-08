@@ -10,14 +10,21 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    // MARK: Declare variables
+    
     var memes: [Meme]!
     var memeToEdit: Meme?
     
+    // MARK: Declare outlets
+    
     @IBOutlet weak var cancelButton: UIBarButtonItem!
    
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Load memes from App Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
     }
@@ -26,6 +33,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         let meme = self.memes[indexPath.row]
         
+        // Load data and format cell
         cell.memeImageView.image = meme.memedImage
         cell.memeImageView.contentMode = .scaleAspectFit
         cell.topTextLabel.text = meme.topText
@@ -40,6 +48,14 @@ class TableViewController: UITableViewController {
         return self.memes.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        controller.memeToEdit = memes[indexPath.row]
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    // MARK: Implement swipe right to delete 
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -51,11 +67,7 @@ class TableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        controller.memeToEdit = memes[indexPath.row]
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
+    // MARK: Actions
     
     @IBAction func cancel(_ sender: Any) {
         self.performSegue(withIdentifier: "cancelSegueFromTableView", sender: self)

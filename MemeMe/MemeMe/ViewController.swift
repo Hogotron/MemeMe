@@ -79,15 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLayoutSubviews()
     }
     
-    // MARK: Declare functions
-    
-    @IBAction func pickImageFromAlbum(_ sender: Any) {
-        presentImagePickerWithSourceType(sourceType: .photoLibrary)
-    }
-    
-    @IBAction func pickImageFromCamera(_ sender: Any) {
-        presentImagePickerWithSourceType(sourceType: .camera)
-    }
+    // MARK: Implement imagePicker functions
     
     func presentImagePickerWithSourceType(sourceType: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
@@ -105,10 +97,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imagePickerView.image = image
             imagePickerView.contentMode = .scaleAspectFit
         } else {
+            // Provide image loading error message
             print("Image loading failed")
         }
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: Format text fields
     
     func prepareTextField(textField: UITextField) {
         textField.defaultTextAttributes = memeTextAttributes
@@ -171,6 +166,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
+    // MARK: Actions
+    
     @IBAction func cancel(_ sender: Any) {
         self.performSegue(withIdentifier: "cancelSegue", sender: self)
     }
@@ -187,6 +184,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
+    
+    @IBAction func pickImageFromAlbum(_ sender: Any) {
+        presentImagePickerWithSourceType(sourceType: .photoLibrary)
+    }
+    
+    @IBAction func pickImageFromCamera(_ sender: Any) {
+        presentImagePickerWithSourceType(sourceType: .camera)
+    }
+    
+    // MARK: Save data
     
     func save(memedImage: UIImage) {
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: memedImage)

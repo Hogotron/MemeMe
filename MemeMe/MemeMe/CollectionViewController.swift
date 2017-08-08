@@ -10,23 +10,32 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    // MARK: Declare variables
+    
     var memes: [Meme]!
     var memeToEdit: Meme?
+    
+    // MARK: Declare outlets
     
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var cancel: UIBarButtonItem!
     
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Declare dimension variables
         let space:CGFloat = 1.0
         let width = (view.frame.size.width - (2 * space)) / 3.0
         let height = (view.frame.size.height - (3 * space)) / 4.0
         
+        // Apply dimension variables
         collectionViewFlowLayout.minimumInteritemSpacing = space
         collectionViewFlowLayout.minimumLineSpacing = space
         collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
 
+        // Load memes from App Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
     }
@@ -49,6 +58,8 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         controller.memeToEdit = memes[indexPath.item]
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    // MARK: Actions
     
     @IBAction func cancel(_ sender: Any) {
         self.performSegue(withIdentifier: "cancelFromCollectionToViewController", sender: self)
