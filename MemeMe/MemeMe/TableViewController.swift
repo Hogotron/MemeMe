@@ -76,10 +76,6 @@ class TableViewController: UITableViewController {
     
     // MARK: Actions
     
-    @IBAction func cancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "cancelSegueFromTableView", sender: self)
-    }
-    
     @IBAction func addMeme(_ sender: Any) {
         let controller = ViewController()
         self.navigationController?.pushViewController(controller, animated: true)

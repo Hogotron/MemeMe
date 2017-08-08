@@ -291,12 +291,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="afV-Dq-4h3">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="crb-Nz-dEO">
-                            <connections>
-                                <action selector="cancel:" destination="g20-FD-URT" id="zsp-nh-ae0"/>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="cancelSegueFromTableView" id="cuA-Qr-Yja"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SMc-X8-Wk1">
                             <connections>
                                 <action selector="addMeme:" destination="g20-FD-URT" id="rPR-zU-09C"/>
@@ -306,7 +300,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="SMc-X8-Wk1" id="WMB-L4-Sja"/>
-                        <outlet property="cancelButton" destination="crb-Nz-dEO" id="vV6-GZ-wmh"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromTableView" id="STU-mF-jLh"/>
                     </connections>
                 </tableViewController>
@@ -316,6 +309,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="88A-Be-0DA"/>
+        <segue reference="WKl-sS-wlv"/>
     </inferredMetricsTieBreakers>
 </document>
