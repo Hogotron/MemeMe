@@ -62,10 +62,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     // MARK: Actions
     
-    @IBAction func cancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "cancelFromCollectionToViewController", sender: self)
-    }
-    
     @IBAction func addButton(_ sender: Any) {
         let controller = ViewController()
         self.navigationController?.pushViewController(controller, animated: true)

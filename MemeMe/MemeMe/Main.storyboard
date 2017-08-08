@@ -193,12 +193,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="A4h-mX-Jf4">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1s9-ld-qLS">
-                            <connections>
-                                <action selector="cancel:" destination="q2x-92-78w" id="qEa-PK-mhI"/>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="cancelFromCollectionToViewController" id="A06-E4-ihv"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SBc-7a-heO">
                             <connections>
                                 <action selector="addButton:" destination="q2x-92-78w" id="4Ly-ty-bCZ"/>
@@ -208,7 +202,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="SBc-7a-heO" id="eLY-zz-VcP"/>
-                        <outlet property="cancel" destination="1s9-ld-qLS" id="zDM-0q-pAR"/>
                         <outlet property="collectionViewFlowLayout" destination="6VL-hd-wEM" id="V6r-SW-JkH"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromCollectionView" id="88A-Be-0DA"/>
                     </connections>
@@ -323,6 +316,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A06-E4-ihv"/>
+        <segue reference="88A-Be-0DA"/>
     </inferredMetricsTieBreakers>
 </document>
