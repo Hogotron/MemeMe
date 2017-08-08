@@ -19,6 +19,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var cancel: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
     // MARK: Lifecycle
     
@@ -63,5 +64,9 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     @IBAction func cancel(_ sender: Any) {
         self.performSegue(withIdentifier: "cancelFromCollectionToViewController", sender: self)
+    }
+    
+    @IBAction func addButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "addMemeFromCollectionView", sender: self)
     }
 }

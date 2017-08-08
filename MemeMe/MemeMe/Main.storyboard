@@ -199,8 +199,15 @@
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="cancelFromCollectionToViewController" id="A06-E4-ihv"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SBc-7a-heO">
+                            <connections>
+                                <action selector="addButton:" destination="q2x-92-78w" id="4Ly-ty-bCZ"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="addMemeFromCollectionView" id="12d-Cu-94A"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="SBc-7a-heO" id="eLY-zz-VcP"/>
                         <outlet property="cancel" destination="1s9-ld-qLS" id="zDM-0q-pAR"/>
                         <outlet property="collectionViewFlowLayout" destination="6VL-hd-wEM" id="V6r-SW-JkH"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromCollectionView" id="88A-Be-0DA"/>
@@ -240,7 +247,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vp-KM-Uvd" id="Ysf-zc-lBa">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-SR-OJH">
@@ -297,8 +304,15 @@
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="cancelSegueFromTableView" id="cuA-Qr-Yja"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SMc-X8-Wk1">
+                            <connections>
+                                <action selector="addMeme:" destination="g20-FD-URT" id="rPR-zU-09C"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="addMemeFromTableView" id="WKl-sS-wlv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="SMc-X8-Wk1" id="WMB-L4-Sja"/>
                         <outlet property="cancelButton" destination="crb-Nz-dEO" id="vV6-GZ-wmh"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromTableView" id="STU-mF-jLh"/>
                     </connections>
@@ -309,6 +323,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cuA-Qr-Yja"/>
+        <segue reference="A06-E4-ihv"/>
     </inferredMetricsTieBreakers>
 </document>

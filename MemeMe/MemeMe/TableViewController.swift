@@ -18,6 +18,7 @@ class TableViewController: UITableViewController {
     // MARK: Declare outlets
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
    
     // MARK: Lifecycle
     
@@ -77,5 +78,9 @@ class TableViewController: UITableViewController {
     
     @IBAction func cancel(_ sender: Any) {
         self.performSegue(withIdentifier: "cancelSegueFromTableView", sender: self)
+    }
+    
+    @IBAction func addMeme(_ sender: Any) {
+        self.performSegue(withIdentifier: "addMemeFromTableView", sender: self)
     }
 }
