@@ -215,7 +215,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwl-cL-L2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3470.625" y="-277.81690140845069"/>
+            <point key="canvasLocation" x="3521" y="-107"/>
         </scene>
         <!--Table-->
         <scene sceneID="frQ-59-807">
@@ -247,7 +247,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vp-KM-Uvd" id="Ysf-zc-lBa">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-SR-OJH">
