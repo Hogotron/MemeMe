@@ -67,6 +67,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     @IBAction func addButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "addMemeFromCollectionView", sender: self)
+        let controller = ViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

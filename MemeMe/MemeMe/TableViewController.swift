@@ -81,6 +81,7 @@ class TableViewController: UITableViewController {
     }
     
     @IBAction func addMeme(_ sender: Any) {
-        self.performSegue(withIdentifier: "addMemeFromTableView", sender: self)
+        let controller = ViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -169,7 +169,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Actions
     
     @IBAction func cancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "cancelSegue", sender: self)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func share(_ sender: Any) {
