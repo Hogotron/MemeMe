@@ -43,6 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("ViewController view is being loaded")
         prepareTextField(textField: topTextField)
         prepareTextField(textField: bottomTextField)
         self.tabBarController?.tabBar.isHidden = true
@@ -55,12 +56,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        print("viewWillAppear is being called")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
             if appDelegate.memes.isEmpty {
-        }
+                print("meme array is empty")
         if memeToEdit != nil {
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
+                }
         }
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
@@ -180,7 +183,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         shareViewController.completionWithItemsHandler = { (activityType: UIActivityType?, completed: Bool, returnedItemds: [Any]?, error: Error?) -> Void in
             if completed {
                 self.save(memedImage: memedImage)
-                self.dismiss(animated: true, completion: nil)
+                //self.dismiss(animated: true, completion: nil)
+                _ = self.navigationController?.popViewController(animated: true)
             }
         }
     }
