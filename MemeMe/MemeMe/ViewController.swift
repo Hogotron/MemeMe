@@ -169,7 +169,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Actions
     
     @IBAction func cancel(_ sender: Any) {
-        let _ = navigationController?.popToRootViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func share(_ sender: Any) {
@@ -200,6 +200,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
+    }
+    
+    deinit {
+        print("ViewController was dismissed")
     }
 }
 
