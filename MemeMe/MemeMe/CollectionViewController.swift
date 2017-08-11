@@ -36,9 +36,16 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         collectionViewFlowLayout.minimumLineSpacing = space
         collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
         // Load memes from App Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
+        
+        collectionView?.reloadData()
     }
     
     override func collectionView(_ collectionVvar: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,13 +64,15 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         controller.memeToEdit = memes[indexPath.item]
-        self.navigationController?.pushViewController(controller, animated: true)
+        //self.navigationController?.pushViewController(controller, animated: true)
+        self.present(controller, animated: true, completion: nil)
     }
     
     // MARK: Actions
     
     @IBAction func addButton(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        navigationController?.pushViewController(controller, animated: true)
+        // navigationController?.pushViewController(controller, animated: true)
+        self.present(controller, animated: true, completion: nil)
     }
 }

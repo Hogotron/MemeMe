@@ -201,7 +201,7 @@
                     <connections>
                         <outlet property="addButton" destination="SBc-7a-heO" id="eLY-zz-VcP"/>
                         <outlet property="collectionViewFlowLayout" destination="6VL-hd-wEM" id="V6r-SW-JkH"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromCollectionView" id="88A-Be-0DA"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showMemeFromCollectionView" id="88A-Be-0DA"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwl-cL-L2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -238,7 +238,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vp-KM-Uvd" id="Ysf-zc-lBa">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-SR-OJH">
@@ -297,7 +297,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="SMc-X8-Wk1" id="WMB-L4-Sja"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="showMemeFromTableView" id="STU-mF-jLh"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showMemeFromTableView" id="STU-mF-jLh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfx-5P-nZa" userLabel="First Responder" sceneMemberID="firstResponder"/>

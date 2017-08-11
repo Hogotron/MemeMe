@@ -172,7 +172,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Actions
     
     @IBAction func cancel(_ sender: Any) {
-        _ = navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func share(_ sender: Any) {
@@ -183,8 +183,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         shareViewController.completionWithItemsHandler = { (activityType: UIActivityType?, completed: Bool, returnedItemds: [Any]?, error: Error?) -> Void in
             if completed {
                 self.save(memedImage: memedImage)
-                //self.dismiss(animated: true, completion: nil)
-                _ = self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+                //_ = self.navigationController?.popViewController(animated: true)
             }
         }
     }

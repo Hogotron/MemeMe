@@ -24,10 +24,16 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         // Load memes from App Delegate
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
+        
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,7 +58,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         controller.memeToEdit = memes[indexPath.row]
-        self.navigationController?.pushViewController(controller, animated: true)
+        // self.navigationController?.pushViewController(controller, animated: true)
+        self.present(controller, animated: true, completion: nil)
     }
     
     // MARK: Implement swipe right to delete 
@@ -77,7 +84,8 @@ class TableViewController: UITableViewController {
     // MARK: Actions
     
     @IBAction func addMeme(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ViewController")
-        self.navigationController?.pushViewController(controller!, animated: true)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        // self.navigationController?.pushViewController(controller!, animated: true)
+        self.present(controller, animated: true, completion: nil)
     }
 }
