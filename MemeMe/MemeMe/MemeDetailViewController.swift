@@ -15,5 +15,10 @@ class MemeDetailViewController: UIViewController {
     var memes = [Meme]()
     var memeToEdit: Meme?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
     
 }
