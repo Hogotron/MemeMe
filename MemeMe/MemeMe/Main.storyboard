@@ -221,24 +221,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-a6-HQt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lHp-a6-HQt" firstAttribute="bottom" secondItem="d0F-sG-gVM" secondAttribute="top" id="0B2-Qv-KdM"/>
-                            <constraint firstItem="lHp-a6-HQt" firstAttribute="top" secondItem="XXB-SE-slv" secondAttribute="bottom" constant="-20" id="4JU-Ny-p1t"/>
+                            <constraint firstItem="lHp-a6-HQt" firstAttribute="top" secondItem="XXB-SE-slv" secondAttribute="bottom" id="4JU-Ny-p1t"/>
                             <constraint firstItem="lHp-a6-HQt" firstAttribute="leading" secondItem="zpn-KE-cgp" secondAttribute="leading" id="FJo-Qz-Vu5"/>
                             <constraint firstAttribute="trailing" secondItem="lHp-a6-HQt" secondAttribute="trailing" id="NcI-0U-KAC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MH0-US-v0F"/>
                     <connections>
                         <outlet property="memeImageView" destination="lHp-a6-HQt" id="cKB-24-g27"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFc-Ae-R5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4464.375" y="-461.61971830985914"/>
+            <point key="canvasLocation" x="5461.875" y="-461.61971830985914"/>
         </scene>
         <!--Table-->
         <scene sceneID="frQ-59-807">
@@ -270,7 +271,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vp-KM-Uvd" id="Ysf-zc-lBa">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-SR-OJH">
@@ -335,6 +336,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfx-5P-nZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3521.25" y="584.15492957746483"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mRE-q1-mAy">
+            <objects>
+                <navigationController storyboardIdentifier="MemeDetailNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="1vM-DX-a8k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I2D-S0-f7l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CdR-JR-j9P" kind="relationship" relationship="rootViewController" id="KEG-XL-fNx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIh-Ad-1Ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4464.375" y="-461.61971830985914"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
