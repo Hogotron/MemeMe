@@ -15,9 +15,11 @@ class MemeDetailViewController: UIViewController {
     var memes = [Meme]()
     var memeToEdit: Meme?
     
+    // MARK: Outlets
+    @IBOutlet weak var memeImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     

@@ -232,6 +232,9 @@
                             <constraint firstAttribute="trailing" secondItem="lHp-a6-HQt" secondAttribute="trailing" id="NcI-0U-KAC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="memeImageView" destination="lHp-a6-HQt" id="cKB-24-g27"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFc-Ae-R5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
