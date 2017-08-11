@@ -232,8 +232,11 @@
                             <constraint firstAttribute="trailing" secondItem="lHp-a6-HQt" secondAttribute="trailing" id="NcI-0U-KAC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MH0-US-v0F"/>
+                    <navigationItem key="navigationItem" id="MH0-US-v0F">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="3rk-gH-OTy"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="3rk-gH-OTy" id="T4I-z5-MFo"/>
                         <outlet property="memeImageView" destination="lHp-a6-HQt" id="cKB-24-g27"/>
                     </connections>
                 </viewController>
