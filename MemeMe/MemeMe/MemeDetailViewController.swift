@@ -6,4 +6,8 @@
 //  Copyright © 2017 Tomas Sidenfaden. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MemeDetailViewController: UIViewController {
+    
+}
