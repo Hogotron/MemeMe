@@ -173,6 +173,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        // _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func share(_ sender: Any) {

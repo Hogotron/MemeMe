@@ -26,6 +26,11 @@ class MemeDetailViewController: UIViewController {
         memeImageView.image = memeToEdit?.memedImage
         memeImageView.contentMode = .scaleAspectFit
     }
+    
+    @IBAction func editAction(_ sender: Any) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
+        self.present(controller, animated: true, completion: nil)
+    }
 
     deinit {
         print("MemeDetailViewController was deinitialized")
