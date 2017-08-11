@@ -10,4 +10,10 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
+    // MARK: Variables
+    
+    var memes = [Meme]()
+    var memeToEdit: Meme?
+    
+    
 }

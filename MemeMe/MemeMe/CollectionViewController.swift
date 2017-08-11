@@ -62,10 +62,10 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! MemeEditorViewController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         controller.memeToEdit = memes[indexPath.item]
-        //self.navigationController?.pushViewController(controller, animated: true)
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+        // self.present(controller, animated: true, completion: nil)
     }
     
     // MARK: Actions
