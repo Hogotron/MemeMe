@@ -56,7 +56,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! MemeEditorViewController
         controller.memeToEdit = memes[indexPath.row]
         // self.navigationController?.pushViewController(controller, animated: true)
         self.present(controller, animated: true, completion: nil)
@@ -84,7 +84,7 @@ class TableViewController: UITableViewController {
     // MARK: Actions
     
     @IBAction func addMeme(_ sender: Any) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
         // self.navigationController?.pushViewController(controller!, animated: true)
         self.present(controller, animated: true, completion: nil)
     }

@@ -62,7 +62,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! MemeEditorViewController
         controller.memeToEdit = memes[indexPath.item]
         //self.navigationController?.pushViewController(controller, animated: true)
         self.present(controller, animated: true, completion: nil)
@@ -71,7 +71,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     // MARK: Actions
     
     @IBAction func addButton(_ sender: Any) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
         // navigationController?.pushViewController(controller, animated: true)
         self.present(controller, animated: true, completion: nil)
     }
