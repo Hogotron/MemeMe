@@ -219,12 +219,23 @@
                     <view key="view" contentMode="scaleToFill" id="zpn-KE-cgp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-a6-HQt">
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d0F-sG-gVM" firstAttribute="top" secondItem="lHp-a6-HQt" secondAttribute="bottom" id="0B2-Qv-KdM"/>
+                            <constraint firstItem="lHp-a6-HQt" firstAttribute="top" secondItem="XXB-SE-slv" secondAttribute="bottom" constant="8" id="4JU-Ny-p1t"/>
+                            <constraint firstItem="lHp-a6-HQt" firstAttribute="leading" secondItem="zpn-KE-cgp" secondAttribute="leading" id="FJo-Qz-Vu5"/>
+                            <constraint firstAttribute="trailing" secondItem="lHp-a6-HQt" secondAttribute="trailing" id="NcI-0U-KAC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFc-Ae-R5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4466" y="-461"/>
+            <point key="canvasLocation" x="4464.375" y="-461.61971830985914"/>
         </scene>
         <!--Table-->
         <scene sceneID="frQ-59-807">
