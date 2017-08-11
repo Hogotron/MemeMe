@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="3521" y="-107"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Detail View Controller-->
         <scene sceneID="bUl-VF-5yC">
             <objects>
-                <viewController id="CdR-JR-j9P" sceneMemberID="viewController">
+                <viewController id="CdR-JR-j9P" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XXB-SE-slv"/>
                         <viewControllerLayoutGuide type="bottom" id="d0F-sG-gVM"/>
