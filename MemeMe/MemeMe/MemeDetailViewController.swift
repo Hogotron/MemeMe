@@ -16,7 +16,6 @@ class MemeDetailViewController: UIViewController {
     
     // MARK: Outlets
     @IBOutlet weak var memeImageView: UIImageView!
-    @IBOutlet weak var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +25,4 @@ class MemeDetailViewController: UIViewController {
         memeImageView.image = memeToEdit?.memedImage
         memeImageView.contentMode = .scaleAspectFit
     }
-
-    deinit {
-        print("MemeDetailViewController was deinitialized")
-    }
-    
 }
