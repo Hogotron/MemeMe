@@ -56,10 +56,10 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! MemeEditorViewController
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         controller.memeToEdit = memes[indexPath.row]
-        // self.navigationController?.pushViewController(controller, animated: true)
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+        // self.present(controller, animated: true, completion: nil)
     }
     
     // MARK: Implement swipe right to delete 
