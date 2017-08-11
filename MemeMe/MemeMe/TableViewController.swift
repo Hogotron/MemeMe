@@ -61,7 +61,6 @@ class TableViewController: UITableViewController {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         controller.memeToEdit = memes[indexPath.row]
         self.navigationController?.pushViewController(controller, animated: true)
-        // self.present(controller, animated: true, completion: nil)
     }
     
     // MARK: Implement swipe right to delete 
@@ -87,7 +86,6 @@ class TableViewController: UITableViewController {
     
     @IBAction func addMeme(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
-        // self.navigationController?.pushViewController(controller!, animated: true)
         self.present(controller, animated: true, completion: nil)
     }
 }

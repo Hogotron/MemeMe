@@ -67,14 +67,12 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         controller.memeToEdit = memes[indexPath.item]
         self.navigationController?.pushViewController(controller, animated: true)
-        // self.present(controller, animated: true, completion: nil)
     }
     
     // MARK: Actions
     
     @IBAction func addButton(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
-        // navigationController?.pushViewController(controller, animated: true)
         self.present(controller, animated: true, completion: nil)
     }
 }

@@ -184,7 +184,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             if completed {
                 self.save(memedImage: memedImage)
                 self.dismiss(animated: true, completion: nil)
-                //_ = self.navigationController?.popViewController(animated: true)
             }
         }
     }
@@ -204,10 +203,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
-    }
-    
-    deinit {
-        print("ViewController was dismissed")
     }
 }
 
