@@ -12,7 +12,6 @@ class MemeDetailViewController: UIViewController {
     
     // MARK: Variables
     
-    var memes = [Meme]()
     var memeToEdit: Meme?
     
     // MARK: Outlets
@@ -21,20 +20,12 @@ class MemeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
-        */
-        
         self.tabBarController?.tabBar.isHidden = true
         
         memeImageView.image = memeToEdit?.memedImage
         memeImageView.contentMode = .scaleAspectFit
     }
-    
-    func backButton(_ sender: UIBarButtonItem) {
-        _ = self.navigationController?.popToRootViewController(animated: true)
-    }
-    
+
     deinit {
         print("MemeDetailViewController was deinitialized")
     }
