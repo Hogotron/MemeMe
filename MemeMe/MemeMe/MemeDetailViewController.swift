@@ -21,6 +21,14 @@ class MemeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        */
+        
+        self.tabBarController?.tabBar.isHidden = true
+        
+        memeImageView.image = memeToEdit?.memedImage
+        memeImageView.contentMode = .scaleAspectFit
     }
     
 }
