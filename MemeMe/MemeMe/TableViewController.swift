@@ -33,6 +33,8 @@ class TableViewController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
         
+        self.tabBarController?.tabBar.isHidden = false
+
         tableView.reloadData()
     }
     

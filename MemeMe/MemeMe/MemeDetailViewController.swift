@@ -31,4 +31,12 @@ class MemeDetailViewController: UIViewController {
         memeImageView.contentMode = .scaleAspectFit
     }
     
+    func backButton(_ sender: UIBarButtonItem) {
+        _ = self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    deinit {
+        print("MemeDetailViewController was deinitialized")
+    }
+    
 }
