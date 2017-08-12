@@ -50,6 +50,8 @@ class TableViewController: UITableViewController {
         cell.bottomTextLabel.text = meme.bottomText
         cell.bottomTextLabel.lineBreakMode = .byWordWrapping
         
+        formatImageView(imageView: cell.memeImageView)
+        
         return cell
     }
     

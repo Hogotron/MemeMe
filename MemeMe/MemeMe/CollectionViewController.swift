@@ -25,8 +25,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("CollectionViewController is being loaded")
+
         // Declare dimension variables
         let space:CGFloat = 1.0
         let width = (view.frame.size.width - (2 * space)) / 3.0
@@ -56,8 +55,13 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
         cell.memeImageView.image = meme.memedImage
         
+        formatImageView(imageView: cell.memeImageView)
+        
         return cell
     }
+    
+
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.memes.count
