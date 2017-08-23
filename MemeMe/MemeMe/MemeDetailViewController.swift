@@ -29,8 +29,12 @@ class MemeDetailViewController: UIViewController {
     
     @IBAction func editAction(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
+        
+        controller.memeToEdit = memeToEdit
+        
         self.present(controller, animated: true, completion: nil)
     }
+
 
     deinit {
         print("MemeDetailViewController was deinitialized")

@@ -233,7 +233,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MH0-US-v0F">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Ui9-Tk-k3f">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Ui9-Tk-k3f">
                             <connections>
                                 <action selector="editAction:" destination="CdR-JR-j9P" id="yco-RZ-GGe"/>
                             </connections>

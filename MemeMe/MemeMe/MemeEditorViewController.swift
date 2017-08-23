@@ -64,6 +64,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             topTextField.text = memeToEdit?.topText
             bottomTextField.text = memeToEdit?.bottomText
                 }
+            } else {
+                bottomTextField.text = memeToEdit?.bottomText
+                topTextField.text = memeToEdit?.topText
+                imagePickerView.image = memeToEdit?.originalImage
         }
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
